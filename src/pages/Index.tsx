@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import logicSchematic from "@/assets/logic-schematic.png";
+
+const DCS_STATES = ["SAFE", "FORBIDDEN", "ESCALATE", "NO DECISION"] as const;
 
 const Index = () => {
   return (
@@ -15,15 +18,15 @@ const Index = () => {
               27 Circle
             </p>
             <h1 className="mb-5 max-w-xl text-foreground">
-              Deterministic decision systems for high-stakes operations.
+              Deterministic systems for high-stakes decisions.
             </h1>
             <p className="max-w-lg text-muted-foreground mb-6 md:mb-8">
-              DCS removes human interpretation under pressure. Pre-approved responses enforce truth during crisis—no deliberation, no deviation.
+              Built by a former Global Supply Manager at Google, Apple, Tesla, and Nuro.
             </p>
             
             <img 
               src={logicSchematic} 
-              alt="Logic schematic diagram" 
+              alt="Logic schematic diagram showing deterministic decision flow" 
               className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto opacity-80"
             />
           </div>
@@ -32,17 +35,11 @@ const Index = () => {
         {/* Divider */}
         <div className="h-px bg-border" />
 
-        {/* What We Build Section */}
+        {/* Problem Statement */}
         <section className="bg-background">
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            <h2 className="section-label mb-4">
-              What We Build
-            </h2>
-            <p className="max-w-lg text-foreground text-base md:text-lg font-medium mb-3">
-              Decision Closure Systems (DCS)
-            </p>
             <p className="max-w-lg text-muted-foreground">
-              Owner-driven engines that control what organizations are permitted to say under pressure. Every external question resolves to approval, rejection, escalation, or silence.
+              Organizations fail under pressure when ambiguity leaks into decisions; DCS exists to force closure.
             </p>
           </div>
         </section>
@@ -50,14 +47,36 @@ const Index = () => {
         {/* Divider */}
         <div className="h-px bg-border" />
 
-        {/* How We Communicate Section */}
+        {/* DCS Four-State Model */}
         <section className="bg-card">
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8">
+              {DCS_STATES.map((state) => (
+                <div
+                  key={state}
+                  className="border border-border bg-background px-4 py-5 text-center font-mono text-xs md:text-sm tracking-wider text-foreground uppercase"
+                >
+                  {state}
+                </div>
+              ))}
+            </div>
+            <p className="max-w-lg text-muted-foreground">
+              Every external question resolves to one of four states—or is routed to a single accountable owner.
+            </p>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="h-px bg-border" />
+
+        {/* Communication Protocol */}
+        <section className="bg-background">
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
             <h2 className="section-label mb-4">
               Communication Protocol
             </h2>
             <p className="max-w-lg text-muted-foreground">
-              All external communication flows through owner-defined channels. We respond only to initiated contact, through the medium specified by the initiator.
+              We respond only to initiated contact, through the medium specified by the initiator.
             </p>
           </div>
         </section>
@@ -65,14 +84,14 @@ const Index = () => {
         {/* Divider */}
         <div className="h-px bg-border" />
 
-        {/* Filtering Statement */}
-        <section className="bg-background">
+        {/* Scope */}
+        <section className="bg-card">
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
             <h2 className="section-label mb-4">
               Scope
             </h2>
             <p className="max-w-lg text-muted-foreground">
-              Built for organizations operating under external pressure—regulatory, legal, reputational. Not designed for consensus-driven teams or exploratory environments.
+              Built for organizations where commitments carry regulatory, legal, or reputational risk.
             </p>
           </div>
         </section>
@@ -80,21 +99,18 @@ const Index = () => {
         {/* Divider */}
         <div className="h-px bg-border" />
 
-        {/* Initialize Protocol Section */}
-        <section className="bg-card">
+        {/* CTA Section */}
+        <section className="bg-background">
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            <h2 className="section-label mb-4">
-              Access
-            </h2>
             <p className="text-muted-foreground mb-4">
-              Entry by request only.
+              Access is by request.
             </p>
-            <a 
-              href="mailto:info@27circle.org?subject=Access%20Request" 
+            <Link 
+              to="/join-us"
               className="inline-block font-mono text-sm text-foreground border border-border px-5 py-2.5 hover:bg-secondary transition-colors"
             >
-              Initialize Protocol →
-            </a>
+              Join the Founding Team →
+            </Link>
           </div>
         </section>
       </main>

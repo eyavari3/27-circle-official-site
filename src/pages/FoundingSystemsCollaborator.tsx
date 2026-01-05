@@ -50,6 +50,16 @@ ${message.trim()}`;
               </section>
 
               <section>
+                <h2 className="mb-4">How We Operate</h2>
+                <p className="text-muted-foreground mb-4">
+                  All external communication flows through owner-defined channels. We respond only to initiated contact, through the medium specified by the initiator.
+                </p>
+                <p className="text-muted-foreground">
+                  We work with organizations operating under external pressure—regulatory, legal, reputational. Not designed for consensus-driven teams or exploratory environments.
+                </p>
+              </section>
+
+              <section>
                 <h2 className="mb-4">Why We Exist</h2>
                 <p className="text-muted-foreground">
                   In real organizations, ambiguity leads to bad promises, endless meetings, and unnecessary pressure. We're interested in building systems that replace that ambiguity with clarity and calm.
