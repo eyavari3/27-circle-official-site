@@ -9,27 +9,8 @@ const Index = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-card relative overflow-hidden">
-          {/* Background schematic with gradient fade */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div 
-              className="absolute inset-0 opacity-100"
-              style={{
-                backgroundImage: `url(${logicSchematic})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: '55% center',
-                backgroundSize: 'auto 100%',
-              }}
-            />
-            {/* Gradient overlay for smooth fade into content */}
-            <div 
-              className="absolute inset-0"
-              style={{
-                background: 'linear-gradient(to right, hsl(var(--card)) 0%, hsl(var(--card)) 10%, transparent 35%)',
-              }}
-            />
-          </div>
-          <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20 relative z-10">
+        <section className="bg-card">
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20">
             <p className="section-label mb-4">
               27 Circle
             </p>
@@ -39,6 +20,15 @@ const Index = () => {
             <p className="max-w-lg text-muted-foreground">
               DCS removes human interpretation under pressure. Pre-approved responses enforce truth during crisis—no deliberation, no deviation.
             </p>
+          </div>
+          
+          {/* Schematic Image */}
+          <div className="container mx-auto px-6 pb-12 md:px-8 md:pb-16 lg:pb-20">
+            <img 
+              src={logicSchematic} 
+              alt="Logic schematic diagram" 
+              className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto opacity-80"
+            />
           </div>
         </section>
 
