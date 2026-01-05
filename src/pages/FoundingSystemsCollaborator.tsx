@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const MODES = [
-  "Core (Full-time)",
   "Part-time (Contributor)",
+  "Core (Full-time)",
   "Intern / Apprentice",
   "Volunteer / Research Contributor",
 ] as const;
@@ -35,13 +35,6 @@ ${message.trim()}`;
       <main className="flex-1">
         <article className="bg-card">
           <div className="container mx-auto px-6 py-16 md:px-8 md:py-20">
-            <Link 
-              to="/careers" 
-              className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-foreground tracking-wide mb-8"
-            >
-              ← Back to Careers
-            </Link>
-            
             <p className="section-label mb-4">Role</p>
             <h1 className="mb-2 text-foreground">Founding Systems Collaborator</h1>
             <p className="font-mono text-xs text-muted-foreground tracking-wide mb-12">
@@ -66,7 +59,7 @@ ${message.trim()}`;
               <section>
                 <h2 className="mb-4">What We're Working On</h2>
                 <p className="text-muted-foreground">
-                  Our current focus is a concept called a Decision Closure System (DCS). The idea is simple: when an external question is asked, it should resolve clearly. Either it's SAFE, FORBIDDEN, needs ESCALATION, or there is NO DECISION yet. No guessing. No "probably." And sometimes, the correct response is silence.
+                  Our current focus is a concept called a Decision Closure System (DCS). The idea is simple: when an external question is asked, it should resolve clearly. Either it's SAFE, FORBIDDEN, needs ESCALATION, or there is NO DECISION. No guessing. No "probably." And sometimes, the correct response is silence.
                 </p>
               </section>
 
@@ -78,9 +71,16 @@ ${message.trim()}`;
               </section>
 
               <section>
+                <h2 className="mb-4">Founder Background</h2>
+                <p className="text-muted-foreground">
+                  Operations and systems work across Apple, Google, and Tesla. Yale MBA. Georgia Tech engineering.
+                </p>
+              </section>
+
+              <section>
                 <h2 className="mb-4">The Role</h2>
                 <p className="text-muted-foreground">
-                  This is not a narrowly defined role. I'm looking for a strong generalist—someone thoughtful, reliable, and capable—who wants to help shape what this becomes. You'll act as a sounding board for ideas, help turn unclear thoughts into concrete actions, and execute alongside me. Some days that may be technical, some operational, and some purely about thinking clearly together.
+                  This is not a narrowly defined role. I'm looking for a strong generalist—someone thoughtful, reliable, and capable—who wants to help shape what this becomes. You'll act as a sounding board for ideas, help turn unclear thoughts into concrete actions, and execute alongside me. Some days that may be technical, some operational, and some purely about thinking clearly together. If you're comfortable with ambiguity and like shaping things from the inside, this role will probably feel natural.
                 </p>
               </section>
 
@@ -106,13 +106,6 @@ ${message.trim()}`;
               </section>
 
               <section>
-                <h2 className="mb-4">Founder Background</h2>
-                <p className="text-muted-foreground">
-                  Operations and systems work across Apple, Google, and Tesla. Yale MBA. Georgia Tech engineering.
-                </p>
-              </section>
-
-              <section>
                 <h2 className="mb-4">Ways to Get Involved</h2>
                 <p className="text-muted-foreground mb-6">
                   We start small. Commitment can increase over time if it's mutually beneficial.
@@ -120,16 +113,16 @@ ${message.trim()}`;
                 
                 <div className="space-y-6">
                   <div className="border border-border rounded-sm p-5">
-                    <h3 className="text-base font-medium text-foreground mb-2">Core (Full-time)</h3>
+                    <h3 className="text-base font-medium text-foreground mb-2">Part-time (Contributor)</h3>
                     <p className="text-sm text-muted-foreground">
-                      30–40 hrs/week, profit-share, high ownership, employee #2 track
+                      10–25 hrs/week, profit-share or project-based, defined scope
                     </p>
                   </div>
                   
                   <div className="border border-border rounded-sm p-5">
-                    <h3 className="text-base font-medium text-foreground mb-2">Part-time (Contributor)</h3>
+                    <h3 className="text-base font-medium text-foreground mb-2">Core (Full-time)</h3>
                     <p className="text-sm text-muted-foreground">
-                      10–25 hrs/week, profit-share or project-based, defined scope
+                      30–40 hrs/week, profit-share, high ownership, employee #2 track
                     </p>
                   </div>
                   
@@ -233,7 +226,7 @@ ${message.trim()}`;
                           : "border-border text-muted-foreground/50 cursor-not-allowed"
                       }`}
                     >
-                      Open email draft
+                      Open email draft →
                     </a>
                     <p className="mt-3 font-mono text-xs text-muted-foreground/60">
                       This opens your email client. Nothing is uploaded or stored.
