@@ -10,20 +10,17 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-card">
-          <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20">
+          <div className="container mx-auto px-6 py-10 md:px-8 md:py-12 lg:py-14">
             <p className="section-label mb-4">
               27 Circle
             </p>
             <h1 className="mb-5 max-w-xl text-foreground">
               Deterministic decision systems for high-stakes operations.
             </h1>
-            <p className="max-w-lg text-muted-foreground">
+            <p className="max-w-lg text-muted-foreground mb-6 md:mb-8">
               DCS removes human interpretation under pressure. Pre-approved responses enforce truth during crisis—no deliberation, no deviation.
             </p>
-          </div>
-          
-          {/* Schematic Image */}
-          <div className="container mx-auto px-6 pb-12 md:px-8 md:pb-16 lg:pb-20">
+            
             <img 
               src={logicSchematic} 
               alt="Logic schematic diagram" 
