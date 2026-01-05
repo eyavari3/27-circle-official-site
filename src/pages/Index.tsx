@@ -14,12 +14,8 @@ const Index = () => {
             <p className="section-label mb-4">
               27 Circle
             </p>
-            <h1 className="mb-5 max-w-xl text-foreground">
-              Deterministic systems for high-stakes decisions.
-            </h1>
-            <p className="max-w-lg text-muted-foreground mb-6 md:mb-8">
-              Built by a former Global Supply Manager at Google, Apple, Tesla, and Nuro.
-            </p>
+            <h1 className="mb-5 max-w-xl text-foreground">Eliminating ambiguity in critical decisions</h1>
+            <p className="max-w-lg text-muted-foreground mb-6 md:mb-8">Designed by former Global Supply Manager at Google, Apple, Tesla, and Nuro.</p>
             
             <img src={logicSchematic} alt="Logic schematic diagram showing deterministic decision flow" className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto opacity-80" />
           </div>
@@ -31,7 +27,9 @@ const Index = () => {
         {/* Problem Statement */}
         <section className="bg-background">
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            <p className="max-w-lg text-muted-foreground">Organizations fail under pressure when ambiguity leaks into decisions; Decision Closure System (DCS) exists to force closure.</p>
+            <p className="max-w-lg text-muted-foreground">Organizations struggle under pressure when decisions are unclear.
+Decision Closure System (DCS) forces closure.
+          </p>
           </div>
         </section>
 
@@ -46,9 +44,7 @@ const Index = () => {
                   {state}
                 </div>)}
             </div>
-            <p className="max-w-lg text-muted-foreground">
-              Every external question resolves to one of four states—or is routed to a single accountable owner.
-            </p>
+            <p className="max-w-lg text-muted-foreground">Every external question resolves to one of four states or is routed to a single accountable owner.</p>
           </div>
         </section>
 
@@ -57,14 +53,7 @@ const Index = () => {
 
         {/* Communication Protocol */}
         <section className="bg-background">
-          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            <h2 className="section-label mb-4">
-              Communication Protocol
-            </h2>
-            <p className="max-w-lg text-muted-foreground">
-              We respond only to initiated contact, through the medium specified by the initiator.
-            </p>
-          </div>
+          
         </section>
 
         {/* Divider */}
@@ -72,14 +61,7 @@ const Index = () => {
 
         {/* Scope */}
         <section className="bg-card">
-          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            <h2 className="section-label mb-4">
-              Scope
-            </h2>
-            <p className="max-w-lg text-muted-foreground">
-              Built for organizations where commitments carry regulatory, legal, or reputational risk.
-            </p>
-          </div>
+          
         </section>
 
         {/* Divider */}
@@ -88,9 +70,7 @@ const Index = () => {
         {/* CTA Section */}
         <section className="bg-background">
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            <p className="text-muted-foreground mb-4">
-              Access is by request.
-            </p>
+            
             <Link to="/join-us" className="inline-block font-mono text-sm text-foreground border border-border px-5 py-2.5 hover:bg-secondary transition-colors">
               Join the Founding Team →
             </Link>
