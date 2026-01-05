@@ -1,8 +1,34 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const MODES = [
+  "Core (Full-time)",
+  "Part-time (Contributor)",
+  "Intern / Apprentice",
+  "Volunteer / Research Contributor",
+] as const;
+
 const FoundingSystemsCollaborator = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mode, setMode] = useState("");
+  const [message, setMessage] = useState("");
+
+  const isValid = name.trim() !== "" && email.trim() !== "" && mode !== "";
+
+  const buildMailtoLink = () => {
+    const subject = `27 Circle — Founding Systems Collaborator — ${mode} — ${name.trim()}`;
+    const body = `Name: ${name.trim()}
+Email: ${email.trim()}
+Mode: ${mode}
+
+Message:
+${message.trim()}`;
+
+    return `mailto:info@27circle.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
@@ -125,15 +151,95 @@ const FoundingSystemsCollaborator = () => {
 
               <section className="pt-4">
                 <h2 className="mb-4">Reach Out</h2>
-                <p className="text-muted-foreground mb-4">
-                  If this sounds like something you'd want to be part of, send a short note introducing yourself. Share who you are and which mode fits you right now.
+                <p className="text-muted-foreground mb-6">
+                  If this sounds like something you'd want to be part of, fill in a few details below.
                 </p>
-                <a 
-                  href="mailto:info@27circle.org" 
-                  className="font-mono text-sm text-foreground hover:text-muted-foreground transition-colors"
-                >
-                  info@27circle.org
-                </a>
+                
+                <div className="space-y-5">
+                  <div>
+                    <label htmlFor="name" className="block font-mono text-xs text-muted-foreground tracking-wide mb-2">
+                      Name <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-full border border-border rounded-sm bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block font-mono text-xs text-muted-foreground tracking-wide mb-2">
+                      Email <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full border border-border rounded-sm bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-foreground/20"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="mode" className="block font-mono text-xs text-muted-foreground tracking-wide mb-2">
+                      Mode of involvement <span className="text-destructive">*</span>
+                    </label>
+                    <select
+                      id="mode"
+                      value={mode}
+                      onChange={(e) => setMode(e.target.value)}
+                      className="w-full border border-border rounded-sm bg-background px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20 appearance-none cursor-pointer"
+                    >
+                      <option value="" disabled>Select a mode</option>
+                      {MODES.map((m) => (
+                        <option key={m} value={m}>{m}</option>
+                      ))}
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block font-mono text-xs text-muted-foreground tracking-wide mb-2">
+                      Short message <span className="text-muted-foreground/50">(optional, 600 chars max)</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value.slice(0, 600))}
+                      rows={4}
+                      className="w-full border border-border rounded-sm bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-foreground/20 resize-none"
+                      placeholder="A few words about yourself or what draws you here..."
+                    />
+                    <p className="mt-1 font-mono text-xs text-muted-foreground/50 text-right">
+                      {message.length}/600
+                    </p>
+                  </div>
+                  
+                  <div className="pt-2">
+                    {!isValid && (
+                      <p className="font-mono text-xs text-muted-foreground mb-3">
+                        Please fill in the required fields above.
+                      </p>
+                    )}
+                    <a
+                      href={isValid ? buildMailtoLink() : undefined}
+                      onClick={(e) => !isValid && e.preventDefault()}
+                      className={`inline-block border rounded-sm px-6 py-2.5 font-mono text-sm tracking-wide transition-colors ${
+                        isValid
+                          ? "border-foreground text-foreground hover:bg-foreground hover:text-background cursor-pointer"
+                          : "border-border text-muted-foreground/50 cursor-not-allowed"
+                      }`}
+                    >
+                      Open email draft
+                    </a>
+                    <p className="mt-3 font-mono text-xs text-muted-foreground/60">
+                      This opens your email client. Nothing is uploaded or stored.
+                    </p>
+                  </div>
+                </div>
               </section>
             </div>
           </div>
