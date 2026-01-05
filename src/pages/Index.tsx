@@ -10,16 +10,25 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-card relative overflow-hidden">
-          {/* Background schematic */}
-          <div 
-            className="absolute inset-0 opacity-[0.04] pointer-events-none"
-            style={{
-              backgroundImage: `url(${logicSchematic})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'right center',
-              backgroundSize: 'auto 80%',
-            }}
-          />
+          {/* Background schematic with gradient fade */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div 
+              className="absolute inset-0 opacity-[0.10]"
+              style={{
+                backgroundImage: `url(${logicSchematic})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right center',
+                backgroundSize: 'auto 90%',
+              }}
+            />
+            {/* Gradient overlay for smooth fade into content */}
+            <div 
+              className="absolute inset-0"
+              style={{
+                background: 'linear-gradient(to right, hsl(var(--card)) 0%, hsl(var(--card)) 30%, transparent 60%)',
+              }}
+            />
+          </div>
           <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20 relative z-10">
             <p className="section-label mb-4">
               27 Circle
