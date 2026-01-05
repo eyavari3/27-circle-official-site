@@ -9,6 +9,14 @@ const Header = () => {
           <img src={logo} alt="27 Circle" className="h-8 w-auto" />
           <span className="text-lg font-semibold text-foreground">27 Circle</span>
         </Link>
+        <nav className="ml-auto">
+          <Link 
+            to="/careers" 
+            className="font-mono text-xs text-muted-foreground hover:text-foreground tracking-wide transition-colors"
+          >
+            Careers
+          </Link>
+        </nav>
       </div>
     </header>
   );

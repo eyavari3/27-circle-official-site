@@ -15,6 +15,12 @@ const Footer = () => {
           </div>
           <nav className="flex gap-8 font-mono">
             <Link 
+              to="/careers" 
+              className="text-xs text-muted-foreground hover:text-foreground tracking-wide"
+            >
+              Careers
+            </Link>
+            <Link 
               to="/privacy" 
               className="text-xs text-muted-foreground hover:text-foreground tracking-wide"
             >
