@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SchematicDiagram from "@/components/SchematicDiagram";
+import logicSchematic from "@/assets/logic-schematic.png";
 
 const Index = () => {
   return (
@@ -9,18 +9,27 @@ const Index = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-card">
-          <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20">
+        <section className="bg-card relative overflow-hidden">
+          {/* Background schematic */}
+          <div 
+            className="absolute inset-0 opacity-[0.04] pointer-events-none"
+            style={{
+              backgroundImage: `url(${logicSchematic})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right center',
+              backgroundSize: 'auto 80%',
+            }}
+          />
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20 relative z-10">
             <p className="section-label mb-4">
               27 Circle
             </p>
             <h1 className="mb-5 max-w-xl text-foreground">
               Deterministic decision systems for high-stakes operations.
             </h1>
-            <p className="mb-10 max-w-lg text-muted-foreground">
+            <p className="max-w-lg text-muted-foreground">
               DCS removes human interpretation under pressure. Pre-approved responses enforce truth during crisis—no deliberation, no deviation.
             </p>
-            <SchematicDiagram />
           </div>
         </section>
 
