@@ -17,15 +17,15 @@ const Index = () => {
               style={{
                 backgroundImage: `url(${logicSchematic})`,
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'right center',
-                backgroundSize: 'auto 90%',
+                backgroundPosition: '35% center',
+                backgroundSize: 'auto 100%',
               }}
             />
             {/* Gradient overlay for smooth fade into content */}
             <div 
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(to right, hsl(var(--card)) 0%, hsl(var(--card)) 30%, transparent 60%)',
+                background: 'linear-gradient(to right, hsl(var(--card)) 0%, hsl(var(--card)) 15%, transparent 45%)',
               }}
             />
           </div>
