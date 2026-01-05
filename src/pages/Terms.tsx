@@ -22,7 +22,7 @@ const Terms = () => {
                 Description of Services
               </h2>
               <p className="text-muted-foreground">
-                27 Circle provides tools and services designed to help people coordinate conversations and manage small communities. Our services facilitate communication through channels chosen by users.
+                27 Circle provides decision closure systems and related infrastructure for organizations requiring deterministic control over external communications and response protocols.
               </p>
             </section>
 

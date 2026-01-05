@@ -31,7 +31,7 @@ const Privacy = () => {
                 When We Communicate
               </h2>
               <p className="text-muted-foreground">
-                We only communicate with you after you initiate contact with us. Communication may occur via email or messaging platforms such as WhatsApp, depending on the channel you use to reach us.
+                We communicate only after you initiate contact. Responses occur through the channel you specify, which may include email or messaging platforms.
               </p>
             </section>
 
