@@ -13,7 +13,7 @@ const Index = () => {
           {/* Background schematic with gradient fade */}
           <div className="absolute inset-0 pointer-events-none">
             <div 
-              className="absolute inset-0 opacity-[0.10]"
+              className="absolute inset-0 opacity-100"
               style={{
                 backgroundImage: `url(${logicSchematic})`,
                 backgroundRepeat: 'no-repeat',
