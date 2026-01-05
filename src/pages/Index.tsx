@@ -17,7 +17,7 @@ const Index = () => {
               style={{
                 backgroundImage: `url(${logicSchematic})`,
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: '35% center',
+                backgroundPosition: '55% center',
                 backgroundSize: 'auto 100%',
               }}
             />
@@ -25,7 +25,7 @@ const Index = () => {
             <div 
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(to right, hsl(var(--card)) 0%, hsl(var(--card)) 15%, transparent 45%)',
+                background: 'linear-gradient(to right, hsl(var(--card)) 0%, hsl(var(--card)) 10%, transparent 35%)',
               }}
             />
           </div>
