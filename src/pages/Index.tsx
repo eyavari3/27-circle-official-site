@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SchematicDiagram from "@/components/SchematicDiagram";
 
 const Index = () => {
   return (
@@ -9,16 +10,17 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-card">
-          <div className="container mx-auto px-6 py-16 md:px-8 md:py-24">
-            <p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20">
+            <p className="section-label mb-4">
               27 Circle
             </p>
-            <h1 className="mb-6 max-w-2xl text-foreground">
+            <h1 className="mb-5 max-w-xl text-foreground">
               Deterministic decision systems for high-stakes operations.
             </h1>
-            <p className="max-w-2xl text-muted-foreground">
-              We build decision closure systems that eliminate ambiguity by forcing every external question into an explicit state of approval, rejection, escalation, or silence.
+            <p className="mb-10 max-w-lg text-muted-foreground">
+              DCS removes human interpretation under pressure. Pre-approved responses enforce truth during crisis—no deliberation, no deviation.
             </p>
+            <SchematicDiagram />
           </div>
         </section>
 
@@ -27,12 +29,15 @@ const Index = () => {
 
         {/* What We Build Section */}
         <section className="bg-background">
-          <div className="container mx-auto px-6 py-14 md:px-8 md:py-18">
-            <h2 className="mb-4 text-foreground">
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
+            <h2 className="section-label mb-4">
               What We Build
             </h2>
-            <p className="max-w-2xl text-muted-foreground">
-              Decision Closure Systems (DCS): owner-driven engines that control what organizations are allowed to say under pressure.
+            <p className="max-w-lg text-foreground text-base md:text-lg font-medium mb-3">
+              Decision Closure Systems (DCS)
+            </p>
+            <p className="max-w-lg text-muted-foreground">
+              Owner-driven engines that control what organizations are permitted to say under pressure. Every external question resolves to approval, rejection, escalation, or silence.
             </p>
           </div>
         </section>
@@ -42,11 +47,11 @@ const Index = () => {
 
         {/* How We Communicate Section */}
         <section className="bg-card">
-          <div className="container mx-auto px-6 py-14 md:px-8 md:py-18">
-            <h2 className="mb-4 text-foreground">
-              How We Communicate
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
+            <h2 className="section-label mb-4">
+              Communication Protocol
             </h2>
-            <p className="max-w-2xl text-muted-foreground">
+            <p className="max-w-lg text-muted-foreground">
               All external communication flows through owner-defined channels. We respond only to initiated contact, through the medium specified by the initiator.
             </p>
           </div>
@@ -55,20 +60,36 @@ const Index = () => {
         {/* Divider */}
         <div className="h-px bg-border" />
 
-        {/* Contact Section */}
+        {/* Filtering Statement */}
         <section className="bg-background">
-          <div className="container mx-auto px-6 py-14 md:px-8 md:py-18">
-            <h2 className="mb-4 text-foreground">
-              Contact
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
+            <h2 className="section-label mb-4">
+              Scope
             </h2>
-            <p className="text-muted-foreground">
-              <a 
-                href="mailto:info@27circle.org" 
-                className="text-foreground underline underline-offset-4 hover:no-underline"
-              >
-                info@27circle.org
-              </a>
+            <p className="max-w-lg text-muted-foreground">
+              Built for organizations operating under external pressure—regulatory, legal, reputational. Not designed for consensus-driven teams or exploratory environments.
             </p>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="h-px bg-border" />
+
+        {/* Initialize Protocol Section */}
+        <section className="bg-card">
+          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
+            <h2 className="section-label mb-4">
+              Access
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              Entry by request only.
+            </p>
+            <a 
+              href="mailto:info@27circle.org?subject=Access%20Request" 
+              className="inline-block font-mono text-sm text-foreground border border-border px-5 py-2.5 hover:bg-secondary transition-colors"
+            >
+              Initialize Protocol →
+            </a>
           </div>
         </section>
       </main>
