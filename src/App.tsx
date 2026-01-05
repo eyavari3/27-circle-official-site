@@ -21,8 +21,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/careers" element={<Navigate to="/careers/founding-systems-collaborator" replace />} />
-          <Route path="/careers/founding-systems-collaborator" element={<FoundingSystemsCollaborator />} />
+          <Route path="/careers" element={<FoundingSystemsCollaborator />} />
+          <Route path="/careers/founding-systems-collaborator" element={<Navigate to="/careers" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
