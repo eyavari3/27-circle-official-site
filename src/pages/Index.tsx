@@ -9,12 +9,30 @@ const Index = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-card">
-          <div className="container mx-auto px-6 py-20 md:px-8 md:py-28">
-            <h1 className="mb-6 max-w-2xl text-foreground">
+          <div className="container mx-auto px-6 py-16 md:px-8 md:py-24">
+            <p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground">
               27 Circle
+            </p>
+            <h1 className="mb-6 max-w-2xl text-foreground">
+              Deterministic decision systems for high-stakes operations.
             </h1>
-            <p className="max-w-xl text-lg text-muted-foreground">
-              27 Circle builds simple tools that help people coordinate conversations and small communities more intentionally.
+            <p className="max-w-2xl text-muted-foreground">
+              We build decision closure systems that eliminate ambiguity by forcing every external question into an explicit state of approval, rejection, escalation, or silence.
+            </p>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="h-px bg-border" />
+
+        {/* What We Build Section */}
+        <section className="bg-background">
+          <div className="container mx-auto px-6 py-14 md:px-8 md:py-18">
+            <h2 className="mb-4 text-foreground">
+              What We Build
+            </h2>
+            <p className="max-w-2xl text-muted-foreground">
+              Decision Closure Systems (DCS): owner-driven engines that control what organizations are allowed to say under pressure.
             </p>
           </div>
         </section>
@@ -23,13 +41,13 @@ const Index = () => {
         <div className="h-px bg-border" />
 
         {/* How We Communicate Section */}
-        <section className="bg-background">
-          <div className="container mx-auto px-6 py-16 md:px-8 md:py-20">
-            <h2 className="mb-5 text-foreground">
+        <section className="bg-card">
+          <div className="container mx-auto px-6 py-14 md:px-8 md:py-18">
+            <h2 className="mb-4 text-foreground">
               How We Communicate
             </h2>
-            <p className="max-w-xl text-muted-foreground">
-              27 Circle communicates with people through channels they choose, including email and messaging platforms, only when they initiate contact.
+            <p className="max-w-2xl text-muted-foreground">
+              All external communication flows through owner-defined channels. We respond only to initiated contact, through the medium specified by the initiator.
             </p>
           </div>
         </section>
@@ -38,16 +56,15 @@ const Index = () => {
         <div className="h-px bg-border" />
 
         {/* Contact Section */}
-        <section className="bg-card">
-          <div className="container mx-auto px-6 py-16 md:px-8 md:py-20">
-            <h2 className="mb-5 text-foreground">
+        <section className="bg-background">
+          <div className="container mx-auto px-6 py-14 md:px-8 md:py-18">
+            <h2 className="mb-4 text-foreground">
               Contact
             </h2>
             <p className="text-muted-foreground">
-              Email:{" "}
               <a 
                 href="mailto:info@27circle.org" 
-                className="font-medium text-foreground underline underline-offset-4"
+                className="text-foreground underline underline-offset-4 hover:no-underline"
               >
                 info@27circle.org
               </a>
