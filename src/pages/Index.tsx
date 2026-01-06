@@ -15,7 +15,7 @@ const Index = () => {
               27 Circle
             </p>
             <h1 className="mb-5 max-w-xl text-foreground">Eliminating ambiguity in critical decisions</h1>
-            <p className="max-w-lg text-muted-foreground mb-6 md:mb-8">Designed by former Global Supply Manager at Google, Apple, Tesla, and Nuro.</p>
+            <p className="max-w-lg text-muted-foreground mb-6 md:mb-8">Designed by former Google, Apple, and Tesla Global Supply Manager</p>
             
             <img src={logicSchematic} alt="Logic schematic diagram showing deterministic decision flow" className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto opacity-80" />
           </div>
