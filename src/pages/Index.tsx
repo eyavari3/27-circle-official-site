@@ -68,14 +68,7 @@ Decision Closure System (DCS) forces closure.
         <div className="h-px bg-border" />
 
         {/* CTA Section */}
-        <section className="bg-background">
-          <div className="container mx-auto px-6 py-12 md:px-8 md:py-14">
-            
-            <Link to="/join-us" className="inline-block font-mono text-sm text-foreground border border-border px-5 py-2.5 hover:bg-secondary transition-colors">
-              Join the Founding Team →
-            </Link>
-          </div>
-        </section>
+        
       </main>
 
       <Footer />
